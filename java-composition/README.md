@@ -4,5 +4,5 @@
 
 
 > #### Program running in Eclipse:
-> ![gif-of-the-program](/assets/Java-Composition.gif)
-> ![image-of-the-program-terminated](/assets/java-composition-exercise.png)
+> ![gif-of-the-program](Java/java-composition/assets/Java-Composition.gif)
+> ![image-of-the-program-terminated](Java/java-composition/assets/java-composition-exercise.png)
