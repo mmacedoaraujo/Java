@@ -9,6 +9,7 @@ public class Employee {
 	protected Integer hours;
 	protected Double valuePerHour;
 
+	// Instantiated the list that will contain the employees data
 	protected List<Employee> employee = new ArrayList<>();
 
 	public Employee() {
@@ -35,10 +36,12 @@ public class Employee {
 		return valuePerHour;
 	}
 
+	// Method for implementing new employees in the list
 	public void addEmployee(Employee employee) {
 		this.employee.add(employee);
 	}
 
+	// Method for removing employees from the list
 	public void removeEmployee(Employee employee) {
 		this.employee.remove(employee);
 	}
@@ -46,14 +49,17 @@ public class Employee {
 	public Double payment() {
 		return valuePerHour * hours;
 	}
-	 public String toString() {
-		 StringBuilder sb = new StringBuilder();
-		 sb.append("\nPAYMENTS:");
-		 for (Employee c : employee) {
-			 
-			 sb.append("\n" + c.getName() + " - $");
-			 sb.append(String.format("%.2f", c.payment()));
-		 }
-		 return sb.toString();
-	 }
+
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("\nPAYMENTS:");
+
+		// For each employee in Employee list execute:
+		for (Employee c : employee) {
+
+			sb.append("\n" + c.getName() + " - $");
+			sb.append(String.format("%.2f", c.payment()));
+		}
+		return sb.toString();
+	}
 }
