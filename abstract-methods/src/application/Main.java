@@ -41,7 +41,6 @@ public class Main {
 			}
 
 			System.out.print("Color (BLACK/BLUE/RED): ");
-
 			// converting String input to Color type
 			Color color = Color.valueOf(sc.nextLine().toUpperCase());
 
