@@ -19,8 +19,8 @@ public class UsedProduct extends Product {
 	public Date getManufactureDate() {
 		return manufactureDate;
 	}
-	
+
 	public String priceTag() {
-		return name + price;
+		return name + "(used) $ " + price + " (Manufacture Date: " + sdf.format(getManufactureDate()) + ")\n";
 	}
 }

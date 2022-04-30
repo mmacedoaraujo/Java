@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Product {
 
-	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	protected static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	protected String name;
 	protected Double price;
 	private List<Product> product = new ArrayList<>();
@@ -40,24 +40,15 @@ public class Product {
 
 	// Method for price tag
 	public String priceTag() {
-		return name + price;
+		return name + " $ " + String.format("%.2f", price);
 	}
 
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("\nPRICE TAGS: \n");
+		sb.append("\nPRICE TAGS:");
 		for (Product c : product) {
 
-			if (c instanceof ImportedProduct) {
-				sb.append(c.getName() + " $ "
-						+ String.format("%.2f", (c.getPrice() + ((ImportedProduct) c).getCustomsFee()))
-						+ " (Customs fee: $" + ((ImportedProduct) c).getCustomsFee() + ")\n");
-			} else if (c instanceof UsedProduct) {
-				sb.append(c.getName() + " (used) $ " + String.format("%.2f", (c.getPrice())) + " (Manufacture date: "
-						+ sdf.format(((UsedProduct) c).getManufactureDate()) + ")\n");
-			} else {
-				sb.append(c.getName() + " $ " + String.format("%.2f", c.getPrice()) + "\n");
-			}
+			sb.append("\n" + c.priceTag());
 		}
 		return sb.toString();
 	}
