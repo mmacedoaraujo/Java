@@ -1,1 +1,1 @@
-![program-running](Java/abstract-methods/assets/abstract-methods-practiceprogram.gif)
+![program-running](assets/abstract-methods-practiceprogram.gif)
