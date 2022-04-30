@@ -1,1 +1,1 @@
-![sample-of-the-program](/assets/basic-ordering-system.gif)
+![sample-of-the-program](/assets/java-basic-ordering-system.gif)
