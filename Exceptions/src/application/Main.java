@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		method2();
-		System.out.println("End of program");
+		System.out.println("End of program.");
 	}
 
 	public static void method2() {
