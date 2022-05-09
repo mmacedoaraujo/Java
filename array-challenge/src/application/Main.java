@@ -29,7 +29,7 @@ public class Main {
 		}
 
 		System.out.printf("%nThe average is: %.1f", sum / gradesArray.length);
-		
+
 		sc.close();
 	}
 }
