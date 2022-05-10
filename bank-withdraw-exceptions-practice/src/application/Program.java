@@ -6,7 +6,7 @@ import java.util.Scanner;
 import model.entities.Account;
 import model.exceptions.DomainExceptions;
 
-public class Main {
+public class Program {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);

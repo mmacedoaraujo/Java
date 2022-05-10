@@ -6,7 +6,7 @@ import java.util.Scanner;
 import entities.Employee;
 import entities.OutsourcedEmployee;
 
-public class Main {
+public class Program {
 
 	public static void main(String[] args) {
 

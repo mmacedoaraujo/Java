@@ -11,7 +11,7 @@ import java.util.Scanner;
 import model.entities.Reservation;
 import model.exceptions.DomainExceptions;
 
-public class Main {
+public class Program {
 
 	public static void main(String[] args) {
 

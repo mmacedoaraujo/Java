@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 import model.enitities.Product;
 
-public class Main {
+public class Program {
 
 	public static void main(String[] args) {
 

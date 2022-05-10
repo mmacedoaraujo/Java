@@ -9,7 +9,7 @@ import entities.Company;
 import entities.Individual;
 import entities.TaxPayer;
 
-public class Main {
+public class Program {
 
 	public static void main(String[] args) {
 

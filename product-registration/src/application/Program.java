@@ -10,7 +10,7 @@ import entities.ImportedProduct;
 import entities.Product;
 import entities.UsedProduct;
 
-public class Main {
+public class Program {
 
 	public static void main(String[] args) throws ParseException {
 		

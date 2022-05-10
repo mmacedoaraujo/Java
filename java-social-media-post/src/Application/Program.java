@@ -6,7 +6,7 @@ import java.util.Calendar;
 import Entities.Comment;
 import Entities.Post;
 
-public class Main {
+public class Program {
 
 	public static void main(String[] args) throws ParseException {
 

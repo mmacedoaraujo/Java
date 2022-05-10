@@ -12,7 +12,7 @@ import Entities.OrderItem;
 import Entities.OrderStatus;
 import Entities.Product;
 
-public class Main {
+public class Program {
 
 	public static void main(String[] args) throws ParseException {
 		
