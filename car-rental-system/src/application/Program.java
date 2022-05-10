@@ -19,7 +19,6 @@ public class Program {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		Locale.setDefault(Locale.US);
 		Scanner input = new Scanner(System.in);
-		Invoice invoice = new Invoice();
 
 		System.out.println("Enter rental data: ");
 		System.out.print("Car model: ");
@@ -35,7 +34,7 @@ public class Program {
 		Double pricePerHour = input.nextDouble();
 		System.out.print("Enter price per day: ");
 		Double pricePerDay = input.nextDouble();
-
+																		//this BrazilTaxService continues the same, doing upcasting
 		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
 
 		rentalService.processInvoice(carRental);

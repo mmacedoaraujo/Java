@@ -7,17 +7,18 @@ public class RentalService {
 
 	private Double pricePerHour;
 	private Double pricePerDay;
-
-	private BrazilTaxService brazilTaxService;
+	
+	//Composition
+	private TaxService taxService;
 
 	public RentalService() {
 
 	}
 
-	public RentalService(Double pricePerHour, Double pricePerDay, BrazilTaxService brazilTaxService) {
+	public RentalService(Double pricePerHour, Double pricePerDay, TaxService taxService) {
 		this.pricePerHour = pricePerHour;
 		this.pricePerDay = pricePerDay;
-		this.brazilTaxService = brazilTaxService;
+		this.taxService = taxService;
 	}
 
 	public Double getPricePerHour() {
@@ -27,7 +28,7 @@ public class RentalService {
 	public Double getPricePerDay() {
 		return pricePerDay;
 	}
-
+	//this creates the invoice belonging to CarRental if you wanna call the values, not in the invoice class
 	public void processInvoice(CarRental carRental) {
 
 		long t1 = carRental.getStart().getTime();
@@ -41,7 +42,7 @@ public class RentalService {
 			basicPayment = Math.ceil(hours / 24) * pricePerDay;
 		}
 		
-		double tax = brazilTaxService.tax(basicPayment);
+		double tax = taxService.tax(basicPayment);
 		
 		carRental.setInvoice(new Invoice(basicPayment, tax));
 	}

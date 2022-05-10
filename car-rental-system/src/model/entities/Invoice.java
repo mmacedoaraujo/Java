@@ -5,8 +5,6 @@ public class Invoice {
 	private Double basicPayment;
 	private Double tax;
 
-	private CarRental carRental;
-
 	public Invoice() {
 
 	}

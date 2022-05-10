@@ -7,6 +7,7 @@ public class CarRental {
 	private Date start;
 	private Date finish;
 	
+	//Composition
 	private Vehicle vechicle;
 	private Invoice invoice;
 
