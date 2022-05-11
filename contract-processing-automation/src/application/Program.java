@@ -2,15 +2,14 @@ package application;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
 import model.entities.Contract;
 import model.entities.Installment;
-import model.services.ContractProcessing;
+import model.services.ContractService;
+import model.services.PaypalService;
 
 public class Program {
 
@@ -19,7 +18,6 @@ public class Program {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Locale.setDefault(Locale.US);
 		Scanner input = new Scanner(System.in);
-		List<Installment> installment = new ArrayList<>();
 
 		System.out.println("Enter contract data: ");
 		System.out.print("Number: ");
@@ -36,11 +34,12 @@ public class Program {
 		Integer installmentNumber = input.nextInt();
 		input.nextLine();
 
-		ContractProcessing cp = new ContractProcessing(installmentNumber, null);
-		try {
-		System.out.println(contract.getInstallment().get(0));
-		}catch (IndexOutOfBoundsException e) {
-			
+		ContractService contractService = new ContractService(installmentNumber, new PaypalService());
+		
+		contractService.processInstallment(contract);
+		
+		for (Installment y : contract.getInstallment()) {
+			System.out.println(y);
 		}
 	}
 }

@@ -51,7 +51,7 @@ public class Contract {
 		return installment;
 	}
 
-	public void addInstallment(Installment installment) {
+	public void setInstallment(Installment installment) {
 		this.installment.add(installment);
 	}
 
