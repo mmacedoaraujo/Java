@@ -11,6 +11,7 @@ import model.entities.Invoice;
 import model.entities.Vehicle;
 import model.services.BrazilTaxService;
 import model.services.RentalService;
+import model.services.USATaxServices;
 
 public class Program {
 
@@ -35,7 +36,7 @@ public class Program {
 		System.out.print("Enter price per day: ");
 		Double pricePerDay = input.nextDouble();
 																		//this BrazilTaxService continues the same, doing upcasting
-		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
+		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new USATaxServices());
 
 		rentalService.processInvoice(carRental);
 
