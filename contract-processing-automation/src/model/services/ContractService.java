@@ -40,7 +40,6 @@ public class ContractService {
 			Double paypalTax = taxService.paymentFee(interest);
 			Double installmentValue = interest + paypalTax;
 			contract.setInstallment(new Installment(addMonth(contract.getDate(), i), installmentValue));
-
 		}
 
 	}
@@ -51,4 +50,5 @@ public class ContractService {
 		myDate.add(Calendar.MONTH, n);
 		return myDate.getTime();
 	}
+
 }

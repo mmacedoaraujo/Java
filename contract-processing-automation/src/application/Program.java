@@ -35,11 +35,14 @@ public class Program {
 		input.nextLine();
 
 		ContractService contractService = new ContractService(installmentNumber, new PaypalService());
-		
+
 		contractService.processInstallment(contract);
 		
+		Double sum = 0.0;
 		for (Installment y : contract.getInstallment()) {
 			System.out.println(y);
+			sum = y.getAmount() + sum;
 		}
+		System.out.println("Total: " + String.format("%.2f", sum));
 	}
 }
