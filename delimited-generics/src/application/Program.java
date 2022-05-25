@@ -27,7 +27,7 @@ public class Program {
 				productList.add(new Products(fields[0], Double.parseDouble(fields[1])));
 				lines = buffRead.readLine();
 			}
-			
+
 			Products x = CalculationService.max(productList);
 			System.out.println("Most expensive: " + x);
 
