@@ -14,11 +14,11 @@ public class Program {
 		List<Shape> myShapes = new ArrayList<>();
 		myShapes.add(new Rectangle(2.0, 3.0));
 		myShapes.add(new Circle(2.0));
-		
+
 		List<Circle> myCircles = new ArrayList<Circle>();
 		myCircles.add(new Circle(2.0));
 		myCircles.add(new Circle(3.0));
-		
+
 		System.out.println("Total area: " + String.format("%.2f", totalArea(myCircles)));
 	}
 
